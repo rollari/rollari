@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:maldivesfellas.com)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(pkill:*)",
+      "Bash(ip addr show eth0)"
+    ]
+  }
+}

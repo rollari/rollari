@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Booking Received — ROLLARI | AMETHYST Maldives{% endblock %}
+
+{% block content %}
+<section class="success-section">
+  <div class="container">
+    <div class="success-card reveal">
+      <div class="success-icon" aria-hidden="true">◆</div>
+      <div class="label label-gold">Booking Received</div>
+      <h1 class="success-title">Thank You,<br><em>{{ name }}</em></h1>
+      <p class="success-msg">Your booking request for <strong>{{ experience }}</strong> has been received. Our team will contact you within <strong>24 hours</strong> to confirm availability and share all the details for your expedition.</p>
+      <div class="success-next">
+        <div class="sn-item"><span class="sn-num">1</span><span>We review your request</span></div>
+        <div class="sn-arrow">→</div>
+        <div class="sn-item"><span class="sn-num">2</span><span>We confirm via email / WhatsApp</span></div>
+        <div class="sn-arrow">→</div>
+        <div class="sn-item"><span class="sn-num">3</span><span>You arrive & enjoy the ocean</span></div>
+      </div>
+      <div class="success-contact">
+        <p>Questions in the meantime?</p>
+        <a href="https://wa.me/9607240006" class="btn btn-gold" target="_blank" rel="noopener">WhatsApp Us <span class="arr"></span></a>
+      </div>
+      <div style="margin-top:40px">
+        <a href="{% url 'index' %}" class="btn btn-ghost">← Back to Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

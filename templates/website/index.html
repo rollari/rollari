@@ -1,0 +1,318 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════════════════════════════ HERO ═══ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <canvas id="heroCanvas"></canvas>
+
+  <div class="hero-body">
+    <div class="container">
+      <div class="hero-eyebrow reveal">
+        <span class="eyebrow-line"></span>
+        <span class="label label-gold">Maldives Premier Ocean Experience</span>
+      </div>
+      <h1 class="hero-h1 reveal d1">
+        <span class="h1-gem">Amethyst</span>
+        <span class="h1-by">by Rollari</span>
+      </h1>
+      <p class="hero-sub reveal d2">
+        Where the Indian Ocean reveals its deepest secrets. Exclusive fishing expeditions and luxury excursions crafted for the discerning traveller.
+      </p>
+      <div class="hero-cta reveal d3">
+        <a href="{% url 'excursions' %}" class="btn btn-primary">Explore Experiences <span class="arr"></span></a>
+        <a href="{% url 'fishing' %}"    class="btn btn-ghost">View Fishing</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hs reveal"><div class="hs-n"><span class="counter" data-t="8">0</span>+</div><div class="hs-l">Years of Mastery</div></div>
+      <div class="hs reveal d1"><div class="hs-n"><span class="counter" data-t="2400">0</span>+</div><div class="hs-l">Expeditions Completed</div></div>
+      <div class="hs reveal d2"><div class="hs-n"><span class="counter" data-t="98">0</span>%</div><div class="hs-l">Guest Satisfaction</div></div>
+      <div class="hs reveal d3"><div class="hs-n"><span class="counter" data-t="40">0</span>+</div><div class="hs-l">Species Encountered</div></div>
+    </div>
+  </div>
+
+  <a href="#about" class="hero-scroll-indicator">
+    <span>Scroll</span>
+    <span class="hsi-line"></span>
+  </a>
+</section>
+
+<!-- ═══════════════════════════════════════ MARQUEE ═══ -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span class="mq-item"><span class="mq-dot"></span>Deep Sea Fishing</span>
+    <span class="mq-item"><span class="mq-dot"></span>Whale Shark Safari</span>
+    <span class="mq-item"><span class="mq-dot"></span>Manta Ray Encounters</span>
+    <span class="mq-item"><span class="mq-dot"></span>Sunset Dolphin Cruise</span>
+    <span class="mq-item"><span class="mq-dot"></span>Private Sandbank Picnic</span>
+    <span class="mq-item"><span class="mq-dot"></span>Island Hopping</span>
+    <span class="mq-item"><span class="mq-dot"></span>Sport Trolling</span>
+    <span class="mq-item"><span class="mq-dot"></span>Traditional Night Fishing</span>
+    <span class="mq-item"><span class="mq-dot"></span>Snorkeling Expeditions</span>
+    <span class="mq-item"><span class="mq-dot"></span>Deep Sea Fishing</span>
+    <span class="mq-item"><span class="mq-dot"></span>Whale Shark Safari</span>
+    <span class="mq-item"><span class="mq-dot"></span>Manta Ray Encounters</span>
+    <span class="mq-item"><span class="mq-dot"></span>Sunset Dolphin Cruise</span>
+    <span class="mq-item"><span class="mq-dot"></span>Private Sandbank Picnic</span>
+    <span class="mq-item"><span class="mq-dot"></span>Island Hopping</span>
+    <span class="mq-item"><span class="mq-dot"></span>Sport Trolling</span>
+    <span class="mq-item"><span class="mq-dot"></span>Traditional Night Fishing</span>
+    <span class="mq-item"><span class="mq-dot"></span>Snorkeling Expeditions</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ ABOUT ═══ -->
+<section id="about" class="section bg-fade-purple">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-img-col reveal">
+        <div class="about-img-float">
+          <div class="aif-badge">
+            <span class="aif-badge-top">Est.</span>
+            <span class="aif-badge-year">2017</span>
+            <span class="aif-badge-bot">Maldives</span>
+          </div>
+        </div>
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=900&q=85&auto=format&fit=crop" alt="Maldives aerial view" loading="lazy">
+          <div class="about-img-overlay"></div>
+        </div>
+        <div class="about-img-accent">
+          <div class="aia-title">Amethyst</div>
+          <div class="aia-sub">◆ Maldives ◆</div>
+        </div>
+      </div>
+
+      <div class="about-text-col">
+        <div class="label reveal">Our Story</div>
+        <div class="divider reveal d1"></div>
+        <h2 class="h2 reveal d1">The Ocean<br><em>Demands</em><br>Mastery</h2>
+        <p class="body reveal d2">ROLLARI was born from a deep passion for Maldivian waters — a place where turquoise lagoons give way to the vast, untamed Indian Ocean. We created AMETHYST to offer something the Maldives had never seen: a truly premium, personalised ocean experience.</p>
+        <p class="body reveal d2">Every expedition is led by seasoned local experts who know these waters intimately. Whether you're pursuing blue marlin in the deep channels or drifting alongside whale sharks at dawn — with AMETHYST, you're not just a guest. You're part of the ocean.</p>
+
+        <div class="feature-list reveal d3">
+          <div class="feat">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            </div>
+            <div><div class="feat-title">Expert Local Captains</div><div class="feat-desc">Born and raised in the Maldives — they know every current, reef and secret spot.</div></div>
+          </div>
+          <div class="feat">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div><div class="feat-title">Fully Bespoke Trips</div><div class="feat-desc">Private groups, custom durations and curated routes — tailored entirely to you.</div></div>
+          </div>
+          <div class="feat">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div><div class="feat-title">Safety First</div><div class="feat-desc">Certified crew, top-tier safety equipment and full coverage on every expedition.</div></div>
+          </div>
+        </div>
+        <div class="reveal d4">
+          <a href="{% url 'booking' %}" class="btn btn-outline">Plan Your Expedition <span class="arr"></span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ FISHING PREVIEW ═══ -->
+<section class="section" id="fishing-preview">
+  <div class="container">
+    <div class="sh">
+      <div class="sh-left">
+        <div class="label reveal">Sport Fishing</div>
+        <div class="divider reveal d1"></div>
+        <h2 class="h2 reveal d1">Cast into the<br><em class="tc-purple">Deep Blue</em></h2>
+      </div>
+      <div class="sh-right reveal d2">
+        <p class="body" style="max-width:380px">From ancient Maldivian night fishing to pursuing trophy marlin in the open ocean — full spectrum fishing, handled with precision.</p>
+        <a href="{% url 'fishing' %}" class="btn btn-outline" style="margin-top:24px">All Fishing Packages <span class="arr"></span></a>
+      </div>
+    </div>
+
+    <div class="cards-3">
+      <article class="fcard reveal" style="--img:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700&q=80&auto=format&fit=crop')">
+        <div class="fcard-bg"></div><div class="fcard-ov"></div>
+        <div class="fcard-body">
+          <div class="fcard-icon">🎣</div>
+          <div class="label label-gold" style="margin-bottom:8px">Full Day Charter</div>
+          <h3 class="fcard-title">Deep Sea<br>Big Game</h3>
+          <p class="fcard-desc">Marlin, sailfish, wahoo and yellowfin tuna in the deep channels of the Maldivian atolls. Premium tackle and an expert crew included.</p>
+          <a href="{% url 'fishing' %}" class="fcard-link">Learn More →</a>
+        </div>
+      </article>
+      <article class="fcard reveal d1" style="--img:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80&auto=format&fit=crop')">
+        <div class="fcard-bg fcard-bg-dim"></div><div class="fcard-ov"></div>
+        <div class="fcard-body">
+          <div class="fcard-icon">🌙</div>
+          <div class="label label-gold" style="margin-bottom:8px">Night Excursion</div>
+          <h3 class="fcard-title">Traditional<br>Night Fishing</h3>
+          <p class="fcard-desc">Ancient Maldivian handline technique beneath a canopy of stars. A spiritual connection with the sea unlike anything else.</p>
+          <a href="{% url 'fishing' %}" class="fcard-link">Learn More →</a>
+        </div>
+      </article>
+      <article class="fcard reveal d2" style="--img:url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=700&q=80&auto=format&fit=crop')">
+        <div class="fcard-bg fcard-bg-dim"></div><div class="fcard-ov"></div>
+        <div class="fcard-body">
+          <div class="fcard-icon">⚡</div>
+          <div class="label label-gold" style="margin-bottom:8px">Half Day</div>
+          <h3 class="fcard-title">Sport<br>Trolling</h3>
+          <p class="fcard-desc">High-speed trolling for mahi-mahi, tuna and barracuda. Adrenaline-fueled action on Maldivian waters.</p>
+          <a href="{% url 'fishing' %}" class="fcard-link">Learn More →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ EXCURSIONS PREVIEW ═══ -->
+<section class="section bg-fade-purple" id="exc-preview">
+  <div class="container">
+    <div class="sh" style="margin-bottom:60px">
+      <div class="sh-left">
+        <div class="label reveal">Amethyst Excursions</div>
+        <div class="divider reveal d1"></div>
+        <h2 class="h2 reveal d1">Beyond the<br><em class="tc-purple">Horizon</em></h2>
+      </div>
+      <div class="sh-right reveal d2">
+        <p class="body" style="max-width:380px">The Maldives is the most biodiverse ocean on Earth. Our excursions immerse you in its wonders — from whale sharks to neon reefs.</p>
+        <a href="{% url 'excursions' %}" class="btn btn-outline" style="margin-top:24px">All Excursions <span class="arr"></span></a>
+      </div>
+    </div>
+
+    <div class="exc-grid">
+      <article class="ecard ecard-lg reveal" style="--img:url('https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=1000&q=85&auto=format&fit=crop')">
+        <div class="ecard-bg"></div><div class="ecard-ov"></div>
+        <div class="ecard-body">
+          <span class="etag">⭐ Most Popular</span>
+          <h3 class="ecard-title">Whale Shark Safari</h3>
+          <div class="ecard-meta"><span>⏱ Full Day</span><span>🤿 Snorkeling</span><span>📸 GoPro Media</span></div>
+        </div>
+      </article>
+      <article class="ecard reveal d1" style="--img:url('https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=600&q=80&auto=format&fit=crop')">
+        <div class="ecard-bg"></div><div class="ecard-ov"></div>
+        <div class="ecard-body"><span class="etag">Signature</span><h3 class="ecard-title">Manta Ray<br>Encounter</h3><div class="ecard-meta"><span>⏱ Half Day</span></div></div>
+      </article>
+      <article class="ecard reveal d2" style="--img:url('https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=600&q=80&auto=format&fit=crop')">
+        <div class="ecard-bg"></div><div class="ecard-ov"></div>
+        <div class="ecard-body"><span class="etag">Evening</span><h3 class="ecard-title">Dolphin<br>Sunset Cruise</h3><div class="ecard-meta"><span>⏱ 3 Hours</span></div></div>
+      </article>
+      <article class="ecard reveal d1" style="--img:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80&auto=format&fit=crop')">
+        <div class="ecard-bg"></div><div class="ecard-ov"></div>
+        <div class="ecard-body"><span class="etag">Private</span><h3 class="ecard-title">Sandbank<br>Picnic</h3><div class="ecard-meta"><span>🍾 Gourmet</span></div></div>
+      </article>
+      <article class="ecard ecard-lg reveal d2" style="--img:url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1000&q=85&auto=format&fit=crop')">
+        <div class="ecard-bg"></div><div class="ecard-ov"></div>
+        <div class="ecard-body"><span class="etag">Full Day</span><h3 class="ecard-title">Island Hopping<br>Adventure</h3><div class="ecard-meta"><span>🏝 3 Islands</span><span>🍽 Lunch</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ SIGNATURE BANNER ═══ -->
+<section class="sig-banner">
+  <div class="sig-bg">
+    <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=1800&q=85&auto=format&fit=crop" alt="Underwater Maldives" loading="lazy">
+    <div class="sig-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="sig-content">
+      <div class="label label-gold reveal">Signature Experience</div>
+      <div class="divider reveal d1"></div>
+      <h2 class="h2 reveal d1">The Ultimate<br><em>Ocean Expedition</em></h2>
+      <p class="body reveal d2" style="margin-top:14px">A full-day private charter combining big game fishing at dawn, a whale shark encounter at midday, and a sundowner dolphin cruise — all aboard your dedicated AMETHYST vessel.</p>
+      <div class="sig-price reveal d2">
+        <span class="sig-from">From</span>
+        <span class="sig-amount">$850</span>
+        <span class="sig-unit">/ private group</span>
+      </div>
+      <div class="sig-tags reveal d3">
+        <span class="stag">✓ Full Day Charter</span>
+        <span class="stag">✓ Premium Tackle</span>
+        <span class="stag">✓ Whale Shark Swim</span>
+        <span class="stag">✓ Gourmet Lunch</span>
+        <span class="stag">✓ GoPro Media</span>
+        <span class="stag">✓ Sunset Cruise</span>
+      </div>
+      <div class="reveal d4">
+        <a href="{% url 'booking' %}?experience=ultimate" class="btn btn-gold">Reserve This Experience <span class="arr"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ GALLERY PREVIEW ═══ -->
+<section class="section" id="gallery-preview">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="label">Our World</div>
+      <div class="divider divider-c d1"></div>
+      <h2 class="h2 d1"><em>The Maldives</em> Through Our Eyes</h2>
+    </div>
+    <div class="gallery-prev-grid">
+      <div class="gp gp-1 reveal"><div class="gp-bg" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=900&q=85&auto=format&fit=crop')"></div><div class="gp-ov"></div></div>
+      <div class="gp gp-2 reveal d1"><div class="gp-bg" style="background-image:url('https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=700&q=80&auto=format&fit=crop')"></div><div class="gp-ov"></div></div>
+      <div class="gp gp-3 reveal d2"><div class="gp-bg" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&auto=format&fit=crop')"></div><div class="gp-ov"></div></div>
+      <div class="gp gp-4 reveal d3"><div class="gp-bg" style="background-image:url('https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=600&q=80&auto=format&fit=crop')"></div><div class="gp-ov"></div></div>
+      <div class="gp gp-5 reveal d4"><div class="gp-bg" style="background-image:url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&q=85&auto=format&fit=crop')"></div><div class="gp-ov"></div></div>
+      <div class="gp gp-6 reveal d5"><div class="gp-bg" style="background-image:url('https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=700&q=80&auto=format&fit=crop')"></div><div class="gp-ov"></div></div>
+    </div>
+    <div class="text-center reveal" style="margin-top:48px">
+      <a href="{% url 'gallery' %}" class="btn btn-outline">View Full Gallery <span class="arr"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ TESTIMONIALS ═══ -->
+<section class="section bg-fade-purple" id="testimonials">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="label">Voices of the Ocean</div>
+      <div class="divider divider-c d1"></div>
+      <h2 class="h2 d1">What Our Guests Say</h2>
+    </div>
+    <div class="tgrid">
+      <div class="tcard reveal"><div class="tc-stars">★★★★★</div><span class="tc-q">"</span><p class="tc-text">The whale shark experience was absolutely life-changing. The AMETHYST crew knew exactly where to find them and we swam alongside three for over an hour. Nothing prepared me for that moment.</p><div class="tc-author"><div class="tc-av">J</div><div><div class="tc-name">James Whitmore</div><div class="tc-origin">London, UK</div></div></div></div>
+      <div class="tcard reveal d1"><div class="tc-stars">★★★★★</div><span class="tc-q">"</span><p class="tc-text">We booked the Ultimate Ocean Expedition for our honeymoon and it exceeded every expectation. Big game fishing in the morning, then swimming with mantas — pure perfection. ROLLARI is world-class.</p><div class="tc-author"><div class="tc-av">S</div><div><div class="tc-name">Sophie & Marc Dubois</div><div class="tc-origin">Paris, France</div></div></div></div>
+      <div class="tcard reveal d2"><div class="tc-stars">★★★★★</div><span class="tc-q">"</span><p class="tc-text">As an experienced sport fisherman I've chartered boats worldwide. AMETHYST is genuinely exceptional — great tackle, a captain who reads the ocean masterfully. We landed a 180lb yellowfin tuna.</p><div class="tc-author"><div class="tc-av">R</div><div><div class="tc-name">Roberto Escobar</div><div class="tc-origin">Miami, USA</div></div></div></div>
+      <div class="tcard reveal d1"><div class="tc-stars">★★★★★</div><span class="tc-q">"</span><p class="tc-text">The sandbank picnic was something from a dream. A pristine strip of sand in the middle of the Indian Ocean, gourmet lunch, turquoise water in every direction. Pure, unforgettable magic.</p><div class="tc-author"><div class="tc-av">A</div><div><div class="tc-name">Ayasha Patel</div><div class="tc-origin">Dubai, UAE</div></div></div></div>
+      <div class="tcard reveal d2"><div class="tc-stars">★★★★★</div><span class="tc-q">"</span><p class="tc-text">Traditional night fishing was the highlight of our Maldives trip. Sitting under the stars fishing the old Maldivian way — you feel connected to something ancient and truly real.</p><div class="tc-author"><div class="tc-av">K</div><div><div class="tc-name">Kenji Tanaka</div><div class="tc-origin">Tokyo, Japan</div></div></div></div>
+      <div class="tcard reveal d3"><div class="tc-stars">★★★★★</div><span class="tc-q">"</span><p class="tc-text">Outstanding from first contact to last goodbye. The ROLLARI team was professional and the AMETHYST crew were simply brilliant. Our whole family still talks about the dolphin cruise every day.</p><div class="tc-author"><div class="tc-av">M</div><div><div class="tc-name">Michael & Sarah Chen</div><div class="tc-origin">Singapore</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ BOOKING CTA ═══ -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <div class="label label-gold">Begin Your Journey</div>
+        <h2 class="h2 cta-h2">Your Ocean<br><em>Awaits</em></h2>
+        <p class="body cta-body">Every AMETHYST experience is designed to be the highlight of your Maldives visit. Reach out and we'll craft your perfect ocean adventure.</p>
+        <div class="cta-btns">
+          <a href="{% url 'booking' %}" class="btn btn-gold">Reserve an Experience <span class="arr"></span></a>
+          <a href="https://wa.me/9607240006" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+        <div class="cta-contacts">
+          <div class="ctac"><div class="ctac-l">Email</div><a href="mailto:info@rollari.com" class="ctac-v">info@rollari.com</a></div>
+          <div class="ctac"><div class="ctac-l">WhatsApp</div><a href="https://wa.me/9607240006" class="ctac-v">+960 724 0006</a></div>
+          <div class="ctac"><div class="ctac-l">Location</div><span class="ctac-v">Maldives</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

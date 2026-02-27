@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Excursions — ROLLARI | AMETHYST Maldives{% endblock %}
+{% block meta_desc %}Whale shark safaris, manta ray encounters, dolphin cruises, sandbank picnics and island hopping in the Maldives with AMETHYST by ROLLARI.{% endblock %}
+{% block nav_excursions %}active{% endblock %}
+
+{% block content %}
+
+<!-- Page Hero -->
+<section class="page-hero" style="--hero-img:url('https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=1800&q=85&auto=format&fit=crop')">
+  <div class="ph-overlay"></div>
+  <div class="container">
+    <div class="ph-content">
+      <div class="label label-gold reveal">Amethyst Excursions</div>
+      <h1 class="ph-title reveal d1">Beyond the<br><em>Horizon</em></h1>
+      <p class="ph-sub reveal d2">Six extraordinary ocean experiences crafted to reveal the Maldives in its purest, most breathtaking form.</p>
+      <div class="reveal d3">
+        <a href="{% url 'booking' %}" class="btn btn-gold">Book an Excursion <span class="arr"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Excursions List -->
+<section class="section" id="exc-list">
+  <div class="container">
+
+    <!-- Whale Shark -->
+    <div class="exc-pkg reveal">
+      <div class="exc-pkg-media" style="background-image:url('https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=900&q=85&auto=format&fit=crop')">
+        <div class="ep-ov"></div>
+        <div class="ep-badge popular">⭐ Most Popular</div>
+      </div>
+      <div class="exc-pkg-body">
+        <div class="ep-header">
+          <div>
+            <div class="label label-gold">Full Day · Ocean Encounter</div>
+            <h3 class="ep-title">Whale Shark Safari</h3>
+          </div>
+          <div class="ep-price"><span>From</span><strong>$120</strong><span>/ person</span></div>
+        </div>
+        <p class="body">Swim alongside the ocean's most magnificent creatures — the gentle giant of the sea. The Maldives' South Ari Atoll is one of the world's only year-round whale shark habitats, and our experienced guides know exactly how to find them. An encounter that will stay with you forever.</p>
+        <div class="ep-details">
+          <div class="ep-detail"><span class="ep-dl">Duration</span><span class="ep-dv">Full Day (7:30am – 4:00pm)</span></div>
+          <div class="ep-detail"><span class="ep-dl">Includes</span><span class="ep-dv">Snorkeling gear, GoPro media, light lunch, refreshments, marine biologist guide</span></div>
+          <div class="ep-detail"><span class="ep-dl">Best For</span><span class="ep-dv">All ages, non-swimmers welcome (life jackets provided)</span></div>
+          <div class="ep-detail"><span class="ep-dl">Group Size</span><span class="ep-dv">Min. 2 / Max. 10 guests</span></div>
+        </div>
+        <a href="{% url 'booking' %}?experience=whale_shark" class="btn btn-primary">Book Whale Shark Safari <span class="arr"></span></a>
+      </div>
+    </div>
+
+    <!-- Manta Ray -->
+    <div class="exc-pkg exc-pkg-alt reveal">
+      <div class="exc-pkg-media" style="background-image:url('https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=900&q=85&auto=format&fit=crop')">
+        <div class="ep-ov"></div>
+        <div class="ep-badge">Signature</div>
+      </div>
+      <div class="exc-pkg-body">
+        <div class="ep-header">
+          <div>
+            <div class="label label-gold">Half Day · Wildlife</div>
+            <h3 class="ep-title">Manta Ray Encounter</h3>
+          </div>
+          <div class="ep-price"><span>From</span><strong>$100</strong><span>/ person</span></div>
+        </div>
+        <p class="body">Glide through the water alongside reef manta rays at their feeding grounds — a mesmerising, silent ballet in the deep blue. Our guides position you perfectly for maximum time in the water with these graceful giants. A dawn departure ensures the calmest conditions and best visibility.</p>
+        <div class="ep-details">
+          <div class="ep-detail"><span class="ep-dl">Duration</span><span class="ep-dv">Half Day (6:30am – 12:00pm)</span></div>
+          <div class="ep-detail"><span class="ep-dl">Includes</span><span class="ep-dv">Snorkeling gear, marine guide, refreshments</span></div>
+          <div class="ep-detail"><span class="ep-dl">Best For</span><span class="ep-dv">Snorkelers and divers; intermediate swimming ability required</span></div>
+          <div class="ep-detail"><span class="ep-dl">Group Size</span><span class="ep-dv">Min. 2 / Max. 8 guests</span></div>
+        </div>
+        <a href="{% url 'booking' %}?experience=manta_ray" class="btn btn-primary">Book Manta Ray Encounter <span class="arr"></span></a>
+      </div>
+    </div>
+
+    <!-- Dolphin Cruise -->
+    <div class="exc-pkg reveal">
+      <div class="exc-pkg-media" style="background-image:url('https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=900&q=85&auto=format&fit=crop')">
+        <div class="ep-ov"></div>
+        <div class="ep-badge">Evening</div>
+      </div>
+      <div class="exc-pkg-body">
+        <div class="ep-header">
+          <div>
+            <div class="label label-gold">3 Hours · Sunset</div>
+            <h3 class="ep-title">Dolphin Sunset Cruise</h3>
+          </div>
+          <div class="ep-price"><span>From</span><strong>$65</strong><span>/ person</span></div>
+        </div>
+        <p class="body">As the sun begins its descent toward the horizon, hundreds of spinner dolphins emerge to play in the bow wave of the boat. Watch them leap and spin against a canvas of gold and crimson sky. This evening cruise is pure magic — perfect for couples, families, and anyone who loves the sea.</p>
+        <div class="ep-details">
+          <div class="ep-detail"><span class="ep-dl">Duration</span><span class="ep-dv">3 Hours (4:30pm – 7:30pm)</span></div>
+          <div class="ep-detail"><span class="ep-dl">Includes</span><span class="ep-dv">Sundowner snacks, refreshments, sunset photography stops</span></div>
+          <div class="ep-detail"><span class="ep-dl">Best For</span><span class="ep-dv">All ages, romantic evenings, families</span></div>
+          <div class="ep-detail"><span class="ep-dl">Group Size</span><span class="ep-dv">Min. 2 / Max. 12 guests</span></div>
+        </div>
+        <a href="{% url 'booking' %}?experience=dolphin_cruise" class="btn btn-primary">Book Dolphin Cruise <span class="arr"></span></a>
+      </div>
+    </div>
+
+    <!-- Sandbank Picnic -->
+    <div class="exc-pkg exc-pkg-alt reveal">
+      <div class="exc-pkg-media" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=900&q=85&auto=format&fit=crop')">
+        <div class="ep-ov"></div>
+        <div class="ep-badge">Private</div>
+      </div>
+      <div class="exc-pkg-body">
+        <div class="ep-header">
+          <div>
+            <div class="label label-gold">Half Day · Private</div>
+            <h3 class="ep-title">Sandbank Picnic</h3>
+          </div>
+          <div class="ep-price"><span>From</span><strong>$180</strong><span>/ person</span></div>
+        </div>
+        <p class="body">A secluded, uninhabited sandbank in the middle of the Indian Ocean — your private island for the morning. White sand so fine it squeaks underfoot, surrounded by crystalline turquoise water in every direction. A gourmet picnic is set up upon arrival. Swim, snorkel, or simply exist in paradise.</p>
+        <div class="ep-details">
+          <div class="ep-detail"><span class="ep-dl">Duration</span><span class="ep-dv">Half Day (8:00am – 1:00pm)</span></div>
+          <div class="ep-detail"><span class="ep-dl">Includes</span><span class="ep-dv">Gourmet picnic lunch, snorkeling gear, beach games, photography</span></div>
+          <div class="ep-detail"><span class="ep-dl">Best For</span><span class="ep-dv">Couples, anniversaries, families, special occasions</span></div>
+          <div class="ep-detail"><span class="ep-dl">Group Size</span><span class="ep-dv">Min. 2 / Max. 10 guests</span></div>
+        </div>
+        <a href="{% url 'booking' %}?experience=sandbank" class="btn btn-primary">Book Sandbank Picnic <span class="arr"></span></a>
+      </div>
+    </div>
+
+    <!-- Island Hopping -->
+    <div class="exc-pkg reveal">
+      <div class="exc-pkg-media" style="background-image:url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&q=85&auto=format&fit=crop')">
+        <div class="ep-ov"></div>
+        <div class="ep-badge">Full Day</div>
+      </div>
+      <div class="exc-pkg-body">
+        <div class="ep-header">
+          <div>
+            <div class="label label-gold">Full Day · Discovery</div>
+            <h3 class="ep-title">Island Hopping Adventure</h3>
+          </div>
+          <div class="ep-price"><span>From</span><strong>$110</strong><span>/ person</span></div>
+        </div>
+        <p class="body">Explore three contrasting islands in a single unforgettable day — a local inhabited island where real Maldivian life unfolds, an uninhabited island for swimming and snorkeling, and a pristine sandbank for lunch. The Maldives in miniature, curated by people who love it most.</p>
+        <div class="ep-details">
+          <div class="ep-detail"><span class="ep-dl">Duration</span><span class="ep-dv">Full Day (7:30am – 4:30pm)</span></div>
+          <div class="ep-detail"><span class="ep-dl">Includes</span><span class="ep-dv">Local lunch, snorkeling gear, guide, all transfers between islands</span></div>
+          <div class="ep-detail"><span class="ep-dl">Best For</span><span class="ep-dv">Culture seekers, families, first-time Maldives visitors</span></div>
+          <div class="ep-detail"><span class="ep-dl">Group Size</span><span class="ep-dv">Min. 2 / Max. 12 guests</span></div>
+        </div>
+        <a href="{% url 'booking' %}?experience=island_hopping" class="btn btn-primary">Book Island Hopping <span class="arr"></span></a>
+      </div>
+    </div>
+
+    <!-- Snorkeling -->
+    <div class="exc-pkg exc-pkg-alt reveal">
+      <div class="exc-pkg-media" style="background-image:url('https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=900&q=85&auto=format&fit=crop')">
+        <div class="ep-ov"></div>
+        <div class="ep-badge">Half Day</div>
+      </div>
+      <div class="exc-pkg-body">
+        <div class="ep-header">
+          <div>
+            <div class="label label-gold">Half Day · Reef</div>
+            <h3 class="ep-title">Snorkeling Expedition</h3>
+          </div>
+          <div class="ep-price"><span>From</span><strong>$75</strong><span>/ person</span></div>
+        </div>
+        <p class="body">Discover the underwater world of the Maldivian reefs — a kaleidoscope of colour, life and beauty just below the surface. Our guide leads you to the best sites in the atoll, including shark nurseries, turtle feeding grounds and coral gardens teeming with tropical fish.</p>
+        <div class="ep-details">
+          <div class="ep-detail"><span class="ep-dl">Duration</span><span class="ep-dv">Half Day (8:00am – 1:00pm)</span></div>
+          <div class="ep-detail"><span class="ep-dl">Includes</span><span class="ep-dv">Premium snorkeling gear, marine guide, refreshments, 3 snorkel sites</span></div>
+          <div class="ep-detail"><span class="ep-dl">Best For</span><span class="ep-dv">All ages, beginners welcome</span></div>
+          <div class="ep-detail"><span class="ep-dl">Group Size</span><span class="ep-dv">Min. 2 / Max. 10 guests</span></div>
+        </div>
+        <a href="{% url 'booking' %}?experience=snorkeling" class="btn btn-primary">Book Snorkeling Expedition <span class="arr"></span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <div class="label label-gold">Can't Decide?</div>
+        <h2 class="h2 cta-h2">Book the Ultimate<br><em>Ocean Expedition</em></h2>
+        <p class="body cta-body">Combine fishing, whale sharks and a sunset dolphin cruise in a single full-day private charter. The Maldives in one extraordinary day.</p>
+        <div class="cta-btns">
+          <a href="{% url 'booking' %}?experience=ultimate" class="btn btn-gold">Book Ultimate Expedition <span class="arr"></span></a>
+          <a href="https://wa.me/9607240006" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

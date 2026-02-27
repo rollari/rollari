@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Fishing — ROLLARI | AMETHYST Maldives{% endblock %}
+{% block meta_desc %}Deep sea big game fishing, traditional night fishing and sport trolling in the Maldives. Book your fishing expedition with AMETHYST by ROLLARI.{% endblock %}
+{% block nav_fishing %}active{% endblock %}
+
+{% block content %}
+
+<!-- Page Hero -->
+<section class="page-hero" style="--hero-img:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1800&q=85&auto=format&fit=crop')">
+  <div class="ph-overlay"></div>
+  <div class="container">
+    <div class="ph-content">
+      <div class="label label-gold reveal">Amethyst Sport Fishing</div>
+      <h1 class="ph-title reveal d1">Cast into the<br><em>Deep Blue</em></h1>
+      <p class="ph-sub reveal d2">World-class fishing in the Maldives' most productive waters — guided by local experts who've spent their lives on these seas.</p>
+      <div class="reveal d3">
+        <a href="{% url 'booking' %}?experience=deep_sea" class="btn btn-gold">Book a Fishing Trip <span class="arr"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="section">
+  <div class="container">
+    <div class="intro-split">
+      <div class="reveal">
+        <div class="label">The Maldivian Waters</div>
+        <div class="divider reveal d1"></div>
+        <h2 class="h2 reveal d1">A Fisherman's<br><em class="tc-purple">Paradise</em></h2>
+      </div>
+      <div class="reveal d2">
+        <p class="body">The Maldives sits in the heart of the Indian Ocean, surrounded by some of the world's most productive fishing grounds. Deep oceanic channels run just kilometres from the atolls — bringing pelagic giants close to shore.</p>
+        <p class="body" style="margin-top:16px">Our AMETHYST fleet is equipped with professional-grade tackle, live bait tanks, and the finest fighting chairs. Every trip is guided by captains who have fished these waters for decades.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Packages -->
+<section class="section bg-fade-purple" id="packages">
+  <div class="container">
+    <div class="section-center reveal" style="margin-bottom:72px">
+      <div class="label">Our Packages</div>
+      <div class="divider divider-c d1"></div>
+      <h2 class="h2 d1">Choose Your<br><em>Expedition</em></h2>
+    </div>
+
+    <!-- Package 1: Deep Sea -->
+    <div class="pkg-card reveal">
+      <div class="pkg-img" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=85&auto=format&fit=crop')">
+        <div class="pkg-img-ov"></div>
+        <div class="pkg-badge">Full Day</div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-header">
+          <div>
+            <div class="label label-gold">Deep Sea Charter</div>
+            <h3 class="pkg-title">Big Game Fishing</h3>
+          </div>
+          <div class="pkg-price">
+            <span class="pp-from">From</span>
+            <span class="pp-amount">$700</span>
+            <span class="pp-unit">/ boat</span>
+          </div>
+        </div>
+        <p class="body">Target the Maldives' most prized pelagic species in the deep oceanic channels that border the atolls. Our expert captains know exactly where the fish are — and the season doesn't matter, the ocean always delivers.</p>
+        <div class="pkg-species">
+          <div class="pkg-species-title">Target Species</div>
+          <div class="species-tags">
+            <span>🐟 Yellowfin Tuna</span>
+            <span>⚔️ Blue Marlin</span>
+            <span>🦈 Sailfish</span>
+            <span>🐡 Wahoo</span>
+            <span>🐠 Dorado</span>
+            <span>🦑 Giant Trevally</span>
+          </div>
+        </div>
+        <div class="pkg-includes">
+          <div class="pkg-includes-title">What's Included</div>
+          <div class="inc-grid">
+            <div class="inc-item"><span class="inc-check">✓</span> Full day (7am–5pm)</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Professional tackle & rods</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Live & lure bait</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Experienced captain & crew</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Gourmet lunch & refreshments</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Up to 6 guests per boat</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Catch photos</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Safety equipment</div>
+          </div>
+        </div>
+        <a href="{% url 'booking' %}?experience=deep_sea" class="btn btn-primary">Book Deep Sea Fishing <span class="arr"></span></a>
+      </div>
+    </div>
+
+    <!-- Package 2: Night Fishing -->
+    <div class="pkg-card pkg-card-alt reveal">
+      <div class="pkg-img pkg-img-night" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=85&auto=format&fit=crop')">
+        <div class="pkg-img-ov"></div>
+        <div class="pkg-badge">Evening</div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-header">
+          <div>
+            <div class="label label-gold">Night Excursion</div>
+            <h3 class="pkg-title">Traditional Night Fishing</h3>
+          </div>
+          <div class="pkg-price">
+            <span class="pp-from">From</span>
+            <span class="pp-amount">$45</span>
+            <span class="pp-unit">/ person</span>
+          </div>
+        </div>
+        <p class="body">Experience the ancient Maldivian fishing tradition — handline fishing from a wooden dhoni beneath a canopy of a million stars. This is how Maldivian fishermen have fished for generations. A truly authentic, spiritual experience of the sea.</p>
+        <div class="pkg-species">
+          <div class="pkg-species-title">Target Species</div>
+          <div class="species-tags">
+            <span>🐟 Red Snapper</span>
+            <span>🐠 Grouper</span>
+            <span>🦑 Squid</span>
+            <span>🐡 Jack Fish</span>
+          </div>
+        </div>
+        <div class="pkg-includes">
+          <div class="pkg-includes-title">What's Included</div>
+          <div class="inc-grid">
+            <div class="inc-item"><span class="inc-check">✓</span> Evening trip (7pm–10pm)</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Traditional handlines provided</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Local guide & crew</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Refreshments on board</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Min. 2 guests</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Safety equipment</div>
+          </div>
+        </div>
+        <a href="{% url 'booking' %}?experience=night_fishing" class="btn btn-primary">Book Night Fishing <span class="arr"></span></a>
+      </div>
+    </div>
+
+    <!-- Package 3: Sport Trolling -->
+    <div class="pkg-card reveal">
+      <div class="pkg-img pkg-img-sport" style="background-image:url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=900&q=85&auto=format&fit=crop')">
+        <div class="pkg-img-ov"></div>
+        <div class="pkg-badge">Half Day</div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-header">
+          <div>
+            <div class="label label-gold">Sport Charter</div>
+            <h3 class="pkg-title">Sport Trolling</h3>
+          </div>
+          <div class="pkg-price">
+            <span class="pp-from">From</span>
+            <span class="pp-amount">$450</span>
+            <span class="pp-unit">/ boat</span>
+          </div>
+        </div>
+        <p class="body">High-speed trolling for fast, hard-fighting species. This is the pure adrenaline fishing experience — covering ground fast, hunting surface-feeding fish, and fighting it all the way to the net. Perfect for those with limited time wanting maximum action.</p>
+        <div class="pkg-species">
+          <div class="pkg-species-title">Target Species</div>
+          <div class="species-tags">
+            <span>🐟 Skipjack Tuna</span>
+            <span>🐡 Mahi-Mahi</span>
+            <span>🦈 Barracuda</span>
+            <span>⚡ Bonito</span>
+          </div>
+        </div>
+        <div class="pkg-includes">
+          <div class="pkg-includes-title">What's Included</div>
+          <div class="inc-grid">
+            <div class="inc-item"><span class="inc-check">✓</span> Half day (4–5 hours)</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Trolling rods & lures</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Captain & crew</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Refreshments</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Up to 4 guests per boat</div>
+            <div class="inc-item"><span class="inc-check">✓</span> Safety equipment</div>
+          </div>
+        </div>
+        <a href="{% url 'booking' %}?experience=sport_trolling" class="btn btn-primary">Book Sport Trolling <span class="arr"></span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <div class="label label-gold">Ready to Cast?</div>
+        <h2 class="h2 cta-h2">Book Your<br><em>Fishing Trip</em></h2>
+        <p class="body cta-body">Our team will confirm availability and advise on the best time and spot for your chosen species. Get in touch today.</p>
+        <div class="cta-btns">
+          <a href="{% url 'booking' %}?experience=deep_sea" class="btn btn-gold">Reserve Now <span class="arr"></span></a>
+          <a href="https://wa.me/9607240006" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

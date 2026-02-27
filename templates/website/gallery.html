@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Gallery — ROLLARI | AMETHYST Maldives{% endblock %}
+{% block nav_gallery %}active{% endblock %}
+
+{% block content %}
+
+<section class="page-hero page-hero-short" style="--hero-img:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1800&q=85&auto=format&fit=crop')">
+  <div class="ph-overlay"></div>
+  <div class="container">
+    <div class="ph-content">
+      <div class="label label-gold reveal">Captured Moments</div>
+      <h1 class="ph-title reveal d1">The Maldives<br><em>Through Our Eyes</em></h1>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery-main">
+  <div class="container">
+
+    <div class="gal-filters reveal">
+      <button class="gf-btn active" data-filter="all">All</button>
+      <button class="gf-btn" data-filter="fishing">Fishing</button>
+      <button class="gf-btn" data-filter="wildlife">Wildlife</button>
+      <button class="gf-btn" data-filter="islands">Islands</button>
+      <button class="gf-btn" data-filter="underwater">Underwater</button>
+    </div>
+
+    <div class="gal-masonry" id="galGrid">
+
+      <div class="gal-item reveal" data-cat="islands">
+        <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=900&q=85&auto=format&fit=crop" alt="Maldives aerial view" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d1" data-cat="wildlife">
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=85&auto=format&fit=crop" alt="Whale shark" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d2" data-cat="fishing">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700&q=80&auto=format&fit=crop" alt="Deep sea fishing" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d1" data-cat="wildlife">
+        <img src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=700&q=80&auto=format&fit=crop" alt="Manta ray" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d2" data-cat="islands">
+        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&q=85&auto=format&fit=crop" alt="Maldives ocean" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d3" data-cat="wildlife">
+        <img src="https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=700&q=80&auto=format&fit=crop" alt="Dolphins" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d1" data-cat="underwater">
+        <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&q=85&auto=format&fit=crop" alt="Underwater Maldives" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d2" data-cat="islands">
+        <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=700&q=80&auto=format&fit=crop" alt="Maldives sunset" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d3" data-cat="fishing">
+        <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=700&q=80&auto=format&fit=crop" alt="Ocean fishing" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d4" data-cat="underwater">
+        <img src="https://images.unsplash.com/photo-1551244072-5d12893278bc?w=700&q=80&auto=format&fit=crop" alt="Coral reef" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d2" data-cat="islands">
+        <img src="https://images.unsplash.com/photo-1540202404-1b927e27fa8b?w=900&q=85&auto=format&fit=crop" alt="Maldives beach" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+      <div class="gal-item reveal d3" data-cat="wildlife">
+        <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?w=700&q=80&auto=format&fit=crop" alt="Sea turtle" loading="lazy">
+        <div class="gal-hover"><div class="gal-zoom">+</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-overlay" id="lbOverlay"></div>
+  <div class="lb-inner">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <div class="lb-img-wrap">
+      <img src="" alt="" id="lbImg" class="lb-img">
+    </div>
+    <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+  </div>
+</div>
+
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <div class="label label-gold">Your Story Awaits</div>
+        <h2 class="h2 cta-h2">Create Your Own<br><em>Moments</em></h2>
+        <p class="body cta-body">Every photo tells a story. Book your AMETHYST experience and let us help you capture memories that last a lifetime.</p>
+        <div class="cta-btns">
+          <a href="{% url 'booking' %}" class="btn btn-gold">Book Now <span class="arr"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Gallery filter
+const filterBtns = document.querySelectorAll('.gf-btn');
+const galItems   = document.querySelectorAll('.gal-item');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    galItems.forEach(item => {
+      const show = filter === 'all' || item.dataset.cat === filter;
+      item.style.display = show ? '' : 'none';
+    });
+  });
+});
+
+// Lightbox
+const lbImages  = Array.from(document.querySelectorAll('.gal-item img'));
+const lightbox  = document.getElementById('lightbox');
+const lbImg     = document.getElementById('lbImg');
+const lbOverlay = document.getElementById('lbOverlay');
+const lbClose   = document.getElementById('lbClose');
+const lbPrev    = document.getElementById('lbPrev');
+const lbNext    = document.getElementById('lbNext');
+let lbCurrent   = 0;
+
+function openLb(idx) {
+  lbCurrent = idx;
+  lbImg.src = lbImages[idx].src.replace(/w=\d+/, 'w=1400');
+  lbImg.alt = lbImages[idx].alt;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function showLb(idx) {
+  lbCurrent = (idx + lbImages.length) % lbImages.length;
+  lbImg.src = lbImages[lbCurrent].src.replace(/w=\d+/, 'w=1400');
+  lbImg.alt = lbImages[lbCurrent].alt;
+}
+
+document.querySelectorAll('.gal-item').forEach((item, i) => {
+  item.addEventListener('click', () => openLb(i));
+});
+
+lbClose.addEventListener('click', closeLb);
+lbOverlay.addEventListener('click', closeLb);
+lbPrev.addEventListener('click', () => showLb(lbCurrent - 1));
+lbNext.addEventListener('click', () => showLb(lbCurrent + 1));
+
+document.addEventListener('keydown', e => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape')      closeLb();
+  if (e.key === 'ArrowLeft')   showLb(lbCurrent - 1);
+  if (e.key === 'ArrowRight')  showLb(lbCurrent + 1);
+});
+</script>
+{% endblock %}

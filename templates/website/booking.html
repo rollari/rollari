@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Book Now — ROLLARI | AMETHYST Maldives{% endblock %}
+{% block meta_desc %}Book your Maldives fishing or excursion experience with AMETHYST by ROLLARI. Deep sea fishing, whale shark safaris and more.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero page-hero-short" style="--hero-img:url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1800&q=85&auto=format&fit=crop')">
+  <div class="ph-overlay"></div>
+  <div class="container">
+    <div class="ph-content">
+      <div class="label label-gold reveal">Begin Your Journey</div>
+      <h1 class="ph-title reveal d1">Reserve Your<br><em>Experience</em></h1>
+      <p class="ph-sub reveal d2">Complete the form below and our team will confirm your booking within 24 hours.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section booking-section">
+  <div class="container">
+    <div class="booking-layout">
+
+      <!-- Form -->
+      <div class="booking-form-col">
+        <div class="bf-header reveal">
+          <div class="label">Your Details</div>
+          <div class="divider d1"></div>
+          <h2 class="h2 d1">Tell Us About<br><em>Your Trip</em></h2>
+        </div>
+
+        <form class="bform reveal d2" method="post" action="{% url 'booking' %}" novalidate>
+          {% csrf_token %}
+
+          {% if form.non_field_errors %}
+          <div class="form-errors">
+            {% for error in form.non_field_errors %}<p>{{ error }}</p>{% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="form-section-title">Personal Information</div>
+
+          <div class="form-row">
+            <div class="form-group {% if form.name.errors %}has-error{% endif %}">
+              <label for="{{ form.name.id_for_label }}">Full Name <span class="req">*</span></label>
+              {{ form.name }}
+              {% for e in form.name.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+            </div>
+            <div class="form-group {% if form.nationality.errors %}has-error{% endif %}">
+              <label for="{{ form.nationality.id_for_label }}">Nationality</label>
+              {{ form.nationality }}
+              {% for e in form.nationality.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group {% if form.email.errors %}has-error{% endif %}">
+              <label for="{{ form.email.id_for_label }}">Email Address <span class="req">*</span></label>
+              {{ form.email }}
+              {% for e in form.email.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+            </div>
+            <div class="form-group {% if form.phone.errors %}has-error{% endif %}">
+              <label for="{{ form.phone.id_for_label }}">Phone Number <span class="req">*</span></label>
+              {{ form.phone }}
+              {% for e in form.phone.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+            </div>
+          </div>
+
+          <div class="form-group {% if form.whatsapp.errors %}has-error{% endif %}">
+            <label for="{{ form.whatsapp.id_for_label }}">WhatsApp Number <span class="opt">(optional)</span></label>
+            {{ form.whatsapp }}
+          </div>
+
+          <div class="form-section-title" style="margin-top:36px">Trip Details</div>
+
+          <div class="form-group {% if form.experience.errors %}has-error{% endif %}">
+            <label for="{{ form.experience.id_for_label }}">Experience <span class="req">*</span></label>
+            {{ form.experience }}
+            {% for e in form.experience.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+          </div>
+
+          <div class="form-row">
+            <div class="form-group {% if form.preferred_date.errors %}has-error{% endif %}">
+              <label for="{{ form.preferred_date.id_for_label }}">Preferred Date <span class="req">*</span></label>
+              {{ form.preferred_date }}
+              {% for e in form.preferred_date.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+            </div>
+            <div class="form-group">
+              <label style="visibility:hidden">Flexible</label>
+              <div class="checkbox-wrap">
+                {{ form.flexible_dates }}
+                <label for="{{ form.flexible_dates.id_for_label }}" class="checkbox-label">Flexible with dates</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group {% if form.adults.errors %}has-error{% endif %}">
+              <label for="{{ form.adults.id_for_label }}">Adults <span class="req">*</span></label>
+              {{ form.adults }}
+              {% for e in form.adults.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+            </div>
+            <div class="form-group">
+              <label for="{{ form.children.id_for_label }}">Children <span class="opt">(under 12)</span></label>
+              {{ form.children }}
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="{{ form.special_requests.id_for_label }}">Special Requests <span class="opt">(optional)</span></label>
+            {{ form.special_requests }}
+          </div>
+
+          <div class="form-group">
+            <label for="{{ form.source.id_for_label }}">How did you hear about us?</label>
+            {{ form.source }}
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-submit">
+            Submit Booking Request <span class="arr"></span>
+          </button>
+
+          <p class="form-note">We'll confirm your booking within 24 hours via email. No payment required yet.</p>
+        </form>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="booking-sidebar">
+
+        <div class="bsb-card reveal">
+          <div class="label label-gold">Direct Contact</div>
+          <div class="divider d1"></div>
+          <h3 class="bsb-title">Prefer to Talk?</h3>
+          <p class="bsb-desc">Our team is available every day from 7am–9pm Maldives time (GMT+5).</p>
+          <div class="bsb-contacts">
+            <a href="https://wa.me/9607240006" class="bsb-contact" target="_blank" rel="noopener">
+              <div class="bsb-icon">💬</div>
+              <div><div class="bsb-cl">WhatsApp</div><div class="bsb-cv">+960 724 0006</div></div>
+            </a>
+            <a href="mailto:reservations@rollari.com" class="bsb-contact">
+              <div class="bsb-icon">✉️</div>
+              <div><div class="bsb-cl">Email</div><div class="bsb-cv">reservations@rollari.com</div></div>
+            </a>
+            <div class="bsb-contact">
+              <div class="bsb-icon">📍</div>
+              <div><div class="bsb-cl">Location</div><div class="bsb-cv">Maldives, Indian Ocean</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bsb-card bsb-card-why reveal">
+          <div class="label">Why Book With Us</div>
+          <div class="divider d1"></div>
+          <div class="why-list">
+            <div class="why-item"><span class="why-icon">✓</span><div><strong>No upfront payment</strong><span>We confirm your slot, payment on arrival</span></div></div>
+            <div class="why-item"><span class="why-icon">✓</span><div><strong>Free cancellation</strong><span>Cancel up to 48 hours before your trip</span></div></div>
+            <div class="why-item"><span class="why-icon">✓</span><div><strong>Expert local guides</strong><span>Born and raised in the Maldives</span></div></div>
+            <div class="why-item"><span class="why-icon">✓</span><div><strong>Private options</strong><span>Exclusive boats available for every experience</span></div></div>
+            <div class="why-item"><span class="why-icon">✓</span><div><strong>24hr response</strong><span>We reply to all enquiries within 24 hours</span></div></div>
+          </div>
+        </div>
+
+        <div class="bsb-card bsb-card-faq reveal">
+          <div class="label">FAQ</div>
+          <div class="divider d1"></div>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-q">When should I book?</div>
+              <div class="faq-a">At least 2–3 days in advance. For peak season (November–April) we recommend 1–2 weeks ahead.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">What if weather is bad?</div>
+              <div class="faq-a">Safety is our priority. If conditions are unsafe, we'll reschedule or offer a full refund.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Can children join?</div>
+              <div class="faq-a">Yes! Most experiences welcome children. We'll advise on age-appropriate choices when you contact us.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Is hotel pickup included?</div>
+              <div class="faq-a">We can arrange transfers from most Maldives resorts and hotels. Please mention your hotel in your request.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
