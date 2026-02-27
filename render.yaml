@@ -2,21 +2,13 @@ services:
   - type: web
     name: rollari
     env: python
+    plan: free
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate
     startCommand: gunicorn rollari.wsgi:application
     envVars:
-      - key: SECRET_KEY
-        generateValue: true
-      - key: DEBUG
-        value: False
       - key: DJANGO_SETTINGS_MODULE
         value: rollari.settings.production
-      - key: DATABASE_URL
-        fromDatabase:
-          name: rollari-db
-          property: connectionString
-
-databases:
-  - name: rollari-db
-    databaseName: rollari
-    user: rollari
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
