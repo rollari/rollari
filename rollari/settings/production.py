@@ -6,7 +6,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = config(
     'ALLOWED_HOSTS',
-    default='*.onrender.com,*.up.railway.app,*.railway.app,*.rollari.com',
+    default='rollari.onrender.com,.onrender.com,.rollari.com',
     cast=lambda v: [s.strip() for s in v.split(',')]
 )
 
