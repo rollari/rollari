@@ -6,7 +6,8 @@
       "Bash(pip install:*)",
       "Bash(pkill:*)",
       "Bash(ip addr show eth0)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(curl:*)"
     ]
   }
 }
